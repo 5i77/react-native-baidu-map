@@ -193,6 +193,11 @@ declare namespace ReactNativeBaiduMap {
        * 动画效果：drop/grow/jump (iOS 仅支持 drop)
        */
       animateType?: string;
+      
+      /**
+       * mark offset
+       */
+      centerOffset?: {x: number, y: number};
 
       /**
        * @default 0
