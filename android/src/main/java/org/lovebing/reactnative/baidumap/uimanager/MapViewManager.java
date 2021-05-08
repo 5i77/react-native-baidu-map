@@ -63,7 +63,7 @@ public class MapViewManager extends ViewGroupManager<TextureMapView> {
         Log.i("MapViewManager", "removeViewAt:" + index + "," + child.getClass().getName());
         if (child instanceof OverlayView) {
             if (child instanceof OverlayMarker) {
-                overlayMarkers.add((OverlayMarker) child);
+                overlayMarkers.remove((OverlayMarker) child);
             }
             ((OverlayView) child).removeFromMap(parent.getMap());
         }
