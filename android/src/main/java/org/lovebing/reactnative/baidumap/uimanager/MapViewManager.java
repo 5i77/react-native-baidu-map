@@ -152,6 +152,7 @@ public class MapViewManager extends ViewGroupManager<TextureMapView> {
 
     @ReactProp(name="center")
     public void setCenter(TextureMapView mapView, ReadableMap position) {
+        mapView.getMap().hideInfoWindow();
         LocationData locationData = ConvertUtils.convert(position, LocationData.class);
         LatLng point = ConvertUtils.convert(locationData);
         if (point == null) {
