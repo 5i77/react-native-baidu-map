@@ -73,6 +73,10 @@ public class OverlayInfoWindow extends ReactViewGroup {
           ViewParent parent = this.getParent();
         } else {
             infoWindow.setPosition(location);
+            BitmapDescriptor bitmapDescriptor = BitmapUtil.createBitmapDescriptor(this, width, height);
+            if (bitmapDescriptor != null) {
+              infoWindow.setBitmapDescriptor(bitmapDescriptor);
+            }
         }
     }
 }
