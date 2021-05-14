@@ -58,9 +58,8 @@
         if ([subview isKindOfClass:[OverlayMarker class]]) {
             [_markers addObject:subview];
         }
-    } else {
-        [super insertReactSubview:subview atIndex:atIndex];
     }
+    [super insertReactSubview:subview atIndex:atIndex];
 }
 
 - (void)removeReactSubview:(UIView *)subview {
